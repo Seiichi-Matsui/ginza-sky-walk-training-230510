@@ -1,0 +1,38 @@
+@use "../common/vars" as *;
+@use "../common/mixins.scss" as *;
+@use "../fonts" as *;
+
+.Section__Title {
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        display: block;
+        margin: 10px auto 0;
+    }
+    
+    &.-en {
+    font-family: $font-din-narrow;
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: .15em;
+    line-height: 1.4;
+    text-align: center;
+
+    @include mediaS {
+        font-size: 30px;
+    }
+    }
+
+    &.-ja {
+        font-size: 30px;
+        text-align: center;
+
+        @include mediaS {
+            font-size: 23px;
+        }
+    }
+}

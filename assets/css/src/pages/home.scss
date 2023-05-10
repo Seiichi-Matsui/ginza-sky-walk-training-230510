@@ -1,0 +1,440 @@
+@use "../common/vars" as *;
+@use "../common/mixins.scss" as *;
+@use "../fonts" as *;
+
+// ---------------------------------------------------------
+
+.hero {
+    width: 100%;
+}
+
+// ---------------------------------------------------------
+
+.Read {
+    color: #0092e5;
+    text-align: center;
+    font-weight: 700;
+
+    h2 {
+        margin-bottom: 35px;
+
+        img {
+            width: 171.3px;
+
+            @include mediaS {
+                width: 128.32px;
+            }
+        }
+    }
+
+    &__Title {
+        font-size: 26px;
+        font-family: $font-din-narrow;
+
+        @include mediaS {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        margin-top: 30px;
+        a {
+            color: #0092e5;
+        }
+    }
+}
+
+// ---------------------------------------------------------
+
+.TolkSession {
+    max-width: 670px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// ---------------------------------------------------------
+
+.News {
+    max-width: 670px;
+    margin: 0 auto;
+
+    .Section__Title {
+        color: #0092e5;
+    }
+
+    li {
+        display: flex;
+        border-top: 1px solid #bfbfbf;
+        height: 70px;
+        padding-left: 10px;
+
+        @include mediaS {
+            flex-wrap: wrap;
+            padding: 8px 10px 10px;
+            height: auto;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        p {
+            margin: auto 0;
+
+            @include mediaS {
+                font-size: 12px;
+            }
+        }
+
+        .News {
+            &__Date {
+                font-size: 12px;
+            }
+
+            &__Info {
+                margin: auto 10px;
+
+                span {
+                    font-size: 11px;
+                    background: #e4e4e4;
+                    padding: 2px 7px;
+                    border-radius: 3px;
+                }
+            }
+
+            &__Text {
+                @include mediaS {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__Bnr {
+        margin-top: 53px;
+        width: 248px;
+
+        @include mediaS {
+            width: 100%;
+        }
+    }
+}
+
+// ---------------------------------------------------------
+
+.Outline {
+    margin: 60px auto 60px;
+    background: #0092E5;
+    color: #fff;
+
+    .Section {
+        padding-top: 45px;
+        padding-bottom: 60px;
+        max-width: 670px;
+        margin: 0 auto;
+    }
+
+    &__Table {
+
+        &__Schedule {
+		    font-family: $font-din-narrow;
+            letter-spacing: .1em;
+        }
+        p {
+            font-size: 18px;
+            
+            @include mediaS {
+                font-size: 15px;
+            }
+
+            strong {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1;
+
+                @include mediaS {
+                    font-size: 30px;
+                }
+            }
+
+            em {
+                font-size: 30px;
+                font-style: inherit;
+                line-height: 1;
+
+                @include mediaS {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------
+
+.walking__Guide {
+    color: #0092e5;
+    text-align: center;
+     p {
+        font-size: 17px;
+        margin: 34px auto;
+
+        @include mediaS {
+            font-size: 13px;
+        }
+     }
+}
+
+// ---------------------------------------------------------
+
+.walking__Img {
+    background: url(../img/home/walking-img-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 44px 20px;
+    overflow: auto;
+
+    ul {
+        display: flex;
+        gap: 28px;
+        margin: 0 auto;
+        width: fit-content;
+
+         li {
+            background: #fff;
+            padding: 22px;
+
+            img {
+                max-height: 180px;
+                width: auto;
+
+                @include mediaM {
+                    max-height: 110px;
+                }
+                @include mediaS {
+                    max-height: 110px;
+                }
+                
+            }
+         }
+    }
+}
+
+// ---------------------------------------------------------
+
+.Model {
+    color: #0092e5;
+    text-align: center;
+
+    p {
+       font-size: 17px;
+       margin: 34px auto;
+
+       @include mediaS {
+        font-size: 13px;
+       }
+    }
+}
+
+// ---------------------------------------------------------
+
+.Stage__Schedule {
+
+    .Section__Title {
+        color: #0092e5;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .Stage__Schedule__TabList {
+        display: flex;
+        justify-content: space-between;
+        gap: 1%;
+
+        li {
+            color: #00a5f0;
+            width: 49.5%;
+            background: #EDF9FE;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px 10px 0 0;
+            line-height: 50px;
+            cursor: pointer;
+
+            &.active {
+                background: #0092e5;
+                color: #fff;
+                cursor: default;
+            }
+        }
+    }
+
+    &__TabContents {
+        background: #0092E5;
+        color: #fff;
+        font-family: $font-din-narrow;
+        font-weight: 700;
+        padding-bottom: 5px;
+        display: none;
+
+        table {
+            letter-spacing: .1em;
+            border-spacing: 30px;
+
+            @include mediaS {
+                border-spacing: 20px 30px;
+            }
+
+            th {
+                letter-spacing: .1em;
+                padding-right: 40px;
+
+                @include mediaS {
+                    padding-right: 0;
+                    font-size: 14px;
+                    width: 1px;
+                }
+            }
+    
+            td {
+                font-size: 20px;
+
+                @include mediaS {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__Info {
+            padding: 0 30px;
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 5px;
+            line-height: 1.5;
+            letter-spacing: .1em;
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+
+    &__Caution {
+        text-align: center;
+        margin-top: 24px;
+
+        a {
+            color: #0092e5;
+        }
+    }
+}
+
+// ---------------------------------------------------------
+
+footer {    
+    background: #0092e5;
+    border-image: linear-gradient(#0092e5,#0092e5) 0 fill/1/0 100vw stretch;
+    color: #fff;
+    margin: 40px auto 0;
+    width: fit-content;
+    padding: 30px 20px 0;
+    max-width: 100%;
+
+    @include mediaS {
+        margin-top: 20px;
+        max-width: 334px;
+        padding-top: 20px;
+        width: auto;
+    }
+
+    .Footer{
+    
+        &__Container {
+            display: flex;
+
+            @include mediaS {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__Logo {
+                width: 90px;
+            }
+
+            dl {
+                margin: 0 0 0 120px;
+
+                @include mediaS {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+
+            dt {
+                font-size: 12px;
+            }
+
+            dd {
+                margin-left: 0;
+                font-size: 10px;
+                margin-bottom: 5px;
+            }
+        }
+
+        &__Contact {
+            margin-top: 30px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            letter-spacing: .1em;
+
+            @include mediaS {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            &__Title {
+                line-height: 2;
+                padding: 2px 8px;
+                border: 1px solid #fff;
+                line-height: 1.6;
+                margin-right: 8px;
+                white-space: nowrap;
+            }
+
+            &__Text {
+                a {
+                    font-size: 10px;
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &__Copyright {
+            background: #fff;
+            border-image: linear-gradient(#fff,#fff) 0 fill/1/0 100vw stretch;
+            color: #000;
+            font-size: 10px;
+            margin: 30px 0 0;
+            padding: 20px;
+            text-align: center;
+        }
+    }
+
+
+
+}

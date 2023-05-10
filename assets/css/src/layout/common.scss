@@ -1,0 +1,9 @@
+@use "../common/vars" as *;
+@use "../common/mixins.scss" as *;
+
+.Section {
+    max-width: 840px;
+    width: calc(100% - 40px);
+    margin: 60px auto 60px;
+    padding: 0 20px;
+}

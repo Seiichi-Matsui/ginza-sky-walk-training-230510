@@ -1,0 +1,42 @@
+@use "../common/vars" as *;
+@use "../common/mixins.scss" as *;
+
+table {
+    border-spacing: 24px;
+    max-width: 670px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 18px;
+    
+    @include mediaS {
+        font-size: 13px;
+        border-spacing: 0 24px;
+    }
+    
+
+    th {
+        border-right: 1px solid currentColor;
+        padding-right: 24px;
+
+        @include mediaS {
+            border-right: 0;
+            position: relative;
+            white-space: nowrap;
+
+            &::after {
+                background: currentColor;
+                content: "";
+                display: block;
+                margin-top: 2px;
+                height: 1px;
+                margin-left: -100px;
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.8;
+    }
+}

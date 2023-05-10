@@ -1,0 +1,34 @@
+@use "../common/vars" as *;
+@use "../common/mixins" as *;
+
+p,
+span,
+a,
+li {
+    font-size: 14px;
+    line-height: 2;
+
+    @include mediaS {
+        font-size: 13px;
+    }
+}
+
+.Caution {
+    font-size: 12px;
+    color: #000;
+    margin-top: 0;
+}
+
+.PcOnly {
+    display: block;
+    @include mediaS {
+        display: none;
+    }
+}
+
+.SpOnly {
+    display: none;
+    @include mediaS {
+        display: block;
+    }
+}

@@ -1,0 +1,130 @@
+// Yu Gothic
+// -----------------------------------------------------------------------------
+@font-face {
+	font-family: "xYuGothic";
+	font-weight: 400;
+	font-style: normal;
+	src:
+		local( "YuGothic-Medium" ),  // win postscript
+		local( "Yu Gothic Medium" ), // win full name (for Chrome)
+		local( "YuGo-Medium" ),      // mac postscript
+		local( "YuGothic Medium" ),  // mac full name (for Chrome)
+		local( "YuGothic-Regular" ), // Win8.1 (no Medium)
+		local( "Yu Gothic" );        // family name
+}
+
+@font-face {
+	font-family: "xYuGothic";
+	font-weight: 700;
+	font-style: normal;
+	src:
+		local( "YuGothic-Bold" ),  // win postscript
+		local( "Yu Gothic Bold" ), // win full name (for Chrome)
+		local( "YuGo-Bold" ),      // mac postscript
+		local( "YuGothic Bold" ),  // mac full name (for Chrome)
+		local( "Yu Gothic" );      // family name
+}
+
+// Yu Mincho
+// -----------------------------------------------------------------------------
+@font-face {
+	font-family: "xYuMincho";
+	font-weight: 400;
+	font-style: normal;
+	src:
+		local( "YuMincho-Regular" ),  // win postscript
+		local( "Yu Mincho Regular" ), // win full name (for Chrome)
+		local( "YuMin-Medium" ),      // mac postscript
+		local( "YuMincho Medium" ),   // mac full name (for Chrome)
+		local( "Yu Mincho" );         // family name
+}
+
+@font-face {
+	font-family: "xYuMincho";
+	font-weight: 600;
+	font-style: normal;
+	src:
+		local( "YuMincho-Demibold" ),  // win postscript
+		local( "Yu Mincho Demibold" ), // win full name (for Chrome)
+		local( "YuMin-Demibold" ),     // mac postscript
+		local( "YuMincho Demibold" ),  // mac full name (for Chrome)
+		local( "Yu Mincho" );          // family name
+}
+
+// DIN alt: dinish
+// https://github.com/playbeing/dinish
+// -----------------------------------------------------------------------------
+$font-din: Dinish, "Helvetica Neue" , Helvetica , Arial, sans-serif;
+$font-din-narrow: DinishCondensed, "Helvetica Neue" , Helvetica , Arial, sans-serif;
+
+@font-face {
+	font-family: "Dinish";
+	font-style: normal;
+	font-weight: 400;
+	src: url( "../fonts/dinish/Dinish-Regular.woff2" );
+}
+
+@font-face {
+	font-family: "Dinish";
+	font-style: Italic;
+	font-weight: 400;
+	src: url( "../fonts/dinish/Dinish-Italic.woff2" );
+}
+
+@font-face {
+	font-family: "Dinish";
+	font-style: normal;
+	font-weight: 700;
+	src: url( "../fonts/dinish/Dinish-Bold.woff2" );
+}
+
+// Condensed
+@font-face {
+	font-family: "DinishCondensed";
+	font-style: normal;
+	font-weight: 400;
+	src: url( "../fonts/dinish/DinishCondensed-Regular.woff2" );
+}
+
+@font-face {
+	font-family: "DinishCondensed";
+	font-style: Italic;
+	font-weight: 400;
+	src: url( "../fonts/dinish/DinishCondensed-Italic.woff2" );
+}
+
+@font-face {
+	font-family: "DinishCondensed";
+	font-style: normal;
+	font-weight: 700;
+	src: url( "../fonts/dinish/DinishCondensed-Bold.woff2" );
+}
+
+// Expanded
+@font-face {
+	font-family: "DinishExpanded";
+	font-style: normal;
+	font-weight: 400;
+	src: url( "../fonts/dinish/DinishExpanded-Regular.woff2" );
+}
+
+@font-face {
+	font-family: "DinishExpanded";
+	font-style: Italic;
+	font-weight: 400;
+	src: url( "../fonts/dinish/DinishExpanded-Italic.woff2" );
+}
+
+@font-face {
+	font-family: "DinishExpanded";
+	font-style: normal;
+	font-weight: 700;
+	src: url( "../fonts/dinish/DinishExpanded-Bold.woff2" );
+}
+
+
+// font-family: 'Noto Sans JP', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+// font-family: 'Noto Serif JP', serif;
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');

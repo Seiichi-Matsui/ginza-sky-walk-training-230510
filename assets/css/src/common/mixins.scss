@@ -1,0 +1,118 @@
+@use "sass:math";
+@use "./vars" as *;
+
+@mixin mediaL () {
+	@media ( min-width: $breakpoint-middle + 1px ) {
+		@content;
+	}
+}
+
+@mixin mediaLM () {
+	@media ( min-width: $breakpoint-small + 1px ) {
+		@content;
+	}
+}
+
+@mixin mediaM () {
+	@media ( max-width: $breakpoint-middle ) and ( min-width: $breakpoint-small + 1px ) {
+		@content;
+	}
+}
+
+@mixin mediaMS () {
+	@media ( max-width: $breakpoint-middle ) {
+		@content;
+	}
+}
+
+@mixin mediaS () {
+	@media ( max-width: $breakpoint-small ) {
+		@content;
+	}
+}
+
+@mixin media2x () {
+	@media
+	( -webkit-min-device-pixel-ratio: 2 ),
+	(         min-device-pixel-ratio: 2 ),
+	(                 min-resolution: 192dpi ),
+	(                 min-resolution: 2dppx ) {
+		@content;
+	}
+}
+
+// hoisting order
+// stylelint-disable
+@include mediaL   { _{ _: 0; } }
+@media (max-width: 1280px) { _{ _: 0; } }
+@include mediaLM  { _{ _: 0; } }
+@include mediaM   { _{ _: 0; } }
+@include mediaMS  { _{ _: 0; } }
+@include mediaS   { _{ _: 0; } }
+@include media2x  { _{ _: 0; } }
+// stylelint-enable
+
+// filter for only IE all versions (CSS Hack)
+// -----------------------------------------------------------------------------
+
+@mixin onlyIE () {
+	@media screen\0 {
+		@content;
+	}
+}
+
+// leading-trim
+// -----------------------------------------------------------------------------
+@mixin trimAscender( $line-height: 1.6, $overwrite: false ) {
+
+	&::before {
+		@if not $overwrite {
+			content: "";
+			display: table;
+			width: 100%;
+			height: 0;
+		}
+		margin-bottom: #{ ( 1 - $line-height ) * 0.5em };
+	}
+}
+
+@mixin trimDescender( $line-height: 1.6, $overwrite: false ) {
+
+	&::after {
+		@if not $overwrite {
+			content: "";
+			display: table;
+			width: 100%;
+			height: 0;
+		}
+		margin-top: #{ ( 1 - $line-height ) * 0.5em };
+	}
+}
+
+@mixin trimLineHeight( $line-height: 1.6, $overwrite: false ) {
+	@include trimAscender( $line-height, $overwrite );
+
+	@include trimDescender( $line-height, $overwrite );
+}
+
+
+//
+// -----------------------------------------------------------------------------
+@mixin wordbreak () {
+	hyphens: auto;
+	word-break: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+
+
+//
+// -----------------------------------------------------------------------------
+
+// @function stripUnit( $number ) {
+// 	@if type-of( $number ) == 'number' and not unitless( $number ) {
+// 		@return math.div( $number, ( $number * 0 + 1 ) );
+// 	}
+
+// 	@return $number;
+// }
